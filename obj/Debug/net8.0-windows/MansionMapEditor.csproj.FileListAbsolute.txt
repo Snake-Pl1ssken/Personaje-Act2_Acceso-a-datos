@@ -1,0 +1,78 @@
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\bin\Debug\net8.0-windows\MansionMapEditor.exe
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\bin\Debug\net8.0-windows\MansionMapEditor.deps.json
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\bin\Debug\net8.0-windows\MansionMapEditor.runtimeconfig.json
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\bin\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\bin\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\App.g.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.lref
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MainWindow.baml
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.g.resources
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.GeneratedMSBuildEditorConfig.editorconfig
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfoInputs.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfo.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.CoreCompileInputs.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\refint\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\MansionMapEditor.genruntimeconfig.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\MansionMapEditor\obj\Debug\net8.0-windows\ref\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.exe
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.deps.json
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.runtimeconfig.json
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\App.g.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.lref
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MainWindow.baml
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.g.resources
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.GeneratedMSBuildEditorConfig.editorconfig
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfoInputs.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfo.cs
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.CoreCompileInputs.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\refint\MansionMapEditor.dll
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.genruntimeconfig.cache
+G:\VDJ\M06\Workspace\ProyectoBaseEditor\ProyectoBaseEditor\obj\Debug\net8.0-windows\ref\MansionMapEditor.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.exe
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.deps.json
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.runtimeconfig.json
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\Google.Protobuf.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\MySql.Data.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\System.Text.Json.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\ZstdSharp.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.AssemblyReference.cache
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\App.g.cs
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.cache
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.lref
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MainWindow.baml
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.g.resources
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.GeneratedMSBuildEditorConfig.editorconfig
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfoInputs.cache
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfo.cs
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.CoreCompileInputs.cache
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionM.0FDBB448.Up2Date
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\refint\MansionMapEditor.dll
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.pdb
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\MansionMapEditor.genruntimeconfig.cache
+G:\VDJ\M06\Actividades\UF2 - ACT1\ProyectoBaseEditor_SOLUCION\ProyectoBaseEditor\obj\Debug\net8.0-windows\ref\MansionMapEditor.dll

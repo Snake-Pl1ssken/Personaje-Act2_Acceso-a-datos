@@ -1,0 +1,76 @@
+﻿<Window x:Class="MansionMapEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MansionMapEditor"
+        mc:Ignorable="d"
+        Title="MansionMapEditor" Width="532" Height="961">
+    <Window.Background>
+        <ImageBrush Opacity="0.19" ImageSource="/Castillo.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Canvas x:Name="Canvas">
+        <Button x:Name="ConnectButton" Content="Connect" Width="105" Height="24" HorizontalAlignment="Left" Canvas.Left="378" Canvas.Top="71" VerticalAlignment="Top" Click="ConnectButton_Click"/>
+        <Button x:Name="DisconnectButton" Content="Disconnect" Width="105" Height="26" HorizontalAlignment="Left" Canvas.Left="378" Canvas.Top="100" VerticalAlignment="Top" Click="DisconnectButton_Click"/>
+        <Button x:Name="InitializeButton" Content="Initialize" Width="105" Height="26" Canvas.Left="378" Canvas.Top="131" HorizontalAlignment="Center" VerticalAlignment="Top" Click="InitializeButton_Click"/>
+        <Label Content="Server" Canvas.Left="35" Canvas.Top="70" Width="116" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="ServerText" Canvas.Left="87" TextWrapping="Wrap" Canvas.Top="74" Width="169" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Database" Canvas.Left="35" Canvas.Top="24" Width="448" Background="#FF357933" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="PortText" Canvas.Left="300" TextWrapping="Wrap" Canvas.Top="72" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Port" Canvas.Left="262" Canvas.Top="67" Width="38" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="User" Canvas.Left="36" Canvas.Top="94" Width="116" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="UserText" Canvas.Left="88" TextWrapping="Wrap" Canvas.Top="100" Width="99" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Pass" Canvas.Left="192" Canvas.Top="93" Width="116" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="PassText" Canvas.Left="236" TextWrapping="Wrap" Canvas.Top="100" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="DB" Canvas.Left="35" Canvas.Top="122" Width="116" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="DBText" Canvas.Left="88" TextWrapping="Wrap" Canvas.Top="126" Width="99" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Height="732" Canvas.Left="10" Stroke="#FF308809" Canvas.Top="203" Width="498" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RadioButton x:Name="EditRoomsRadioButton" Content="Rooms" Canvas.Left="51" Canvas.Top="222" Foreground="#FF23CC45" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True" Checked="EditRoomsRadioButton_Checked"/>
+        <RadioButton x:Name="EditCharactersRadioButton" Content="Characters" Canvas.Left="128" Canvas.Top="222" Foreground="#FF23CC45" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="EditCharactersRadioButton_Checked"/>
+        <Canvas x:Name="RoomsCanvas" Height="945" Width="519" HorizontalAlignment="Center" VerticalAlignment="Top" d:IsHidden="True">
+            <TextBox x:Name="RoomNameText" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="318" Width="177" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Name" Canvas.Left="129" Canvas.Top="312" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Description" Canvas.Left="35" Canvas.Top="352" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomDescriptionText" Canvas.Left="114" TextWrapping="Wrap" Canvas.Top="352" Width="251" Height="34" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="RoomListUpdateButton" Content="Update" Width="105" Height="24" Canvas.Left="382" Canvas.Top="608" Click="RoomListUpdateButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="RoomAddButton" Content="Add" Width="105" Height="24" Canvas.Left="378" Canvas.Top="350" Click="RoomAddButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Id" Canvas.Left="35" Canvas.Top="312" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomIdText" Canvas.Left="62" TextWrapping="Wrap" Canvas.Top="318" Width="62" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="RoomDeleteButton" Content="Delete" Width="105" Height="24" Canvas.Left="378" Canvas.Top="414" Click="RoomDeleteButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomNeighbourNText" Canvas.Left="185" TextWrapping="Wrap" Canvas.Top="478" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Neighbours" Canvas.Left="32" Canvas.Top="446" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Nord" Canvas.Left="199" Canvas.Top="446" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="West" Canvas.Left="69" Canvas.Top="496" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="East" Canvas.Left="345" Canvas.Top="496" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomNeighbourWText" Canvas.Left="111" TextWrapping="Wrap" Canvas.Top="501" Width="62" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomNeighbourEText" Canvas.Left="273" TextWrapping="Wrap" Canvas.Top="501" Width="66" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomNeighbourSText" Canvas.Left="185" TextWrapping="Wrap" Canvas.Top="528" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="South" Canvas.Left="199" Canvas.Top="546" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="List" Canvas.Left="35" Canvas.Top="576" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomBackgroundText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="398" Width="250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Background" Canvas.Left="36" Canvas.Top="392" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="RoomFindButton" Content="Find" Width="105" Height="24" Canvas.Left="378" Canvas.Top="316" Click="RoomFindButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="RoomModifyButton" Content="Modify" Width="105" Height="24" Canvas.Left="378" Canvas.Top="382" Click="RoomModifyButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="RoomListText" Canvas.Left="44" TextWrapping="Wrap" Canvas.Top="608" Width="321" Height="294" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Rooms" Canvas.Left="35" Canvas.Top="254" Width="448" Background="#FF357933" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+        <Canvas x:Name="CharactersCanvas" Height="945" Width="519" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="CharacterName" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="318" Width="177" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Name" Canvas.Left="129" Canvas.Top="312" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="CharacterListUpdateButton" Content="Update" Width="105" Height="24" Canvas.Left="382" Canvas.Top="608" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CharacterListUpdateButton_Click"/>
+            <Button x:Name="CharacterAddButton" Content="Add" Width="105" Height="24" Canvas.Left="378" Canvas.Top="350" HorizontalAlignment="Center" VerticalAlignment="Top" Click="CharacterAddButton_Click"/>
+            <Label Content="Id" Canvas.Left="35" Canvas.Top="312" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="CharacterIdText" Canvas.Left="62" TextWrapping="Wrap" Canvas.Top="318" Width="62" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="CharacterDeleteButton" Content="Delete" Width="105" Height="24" Canvas.Left="378" Canvas.Top="414" HorizontalAlignment="Center" VerticalAlignment="Top" Click="CharacterDeleteButton_Click"/>
+            <TextBox x:Name="CharacterRoomText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="392" Width="78" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Room" Canvas.Left="35" Canvas.Top="388" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="List" Canvas.Left="36" Canvas.Top="576" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="CharacterImageText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="354" Width="250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Image" Canvas.Left="35" Canvas.Top="350" Width="74" Background="{x:Null}" Foreground="#FF5CFF45" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="CharacterFindButton" Content="Find" Width="105" Height="24" Canvas.Left="378" Canvas.Top="316" HorizontalAlignment="Center" VerticalAlignment="Top" Click="CharacterFindButton_Click"/>
+            <Button x:Name="CharacterModifyButton" Content="Modify" Width="105" Height="24" Canvas.Left="378" Canvas.Top="382" HorizontalAlignment="Center" VerticalAlignment="Top" Click="CharacterModifyButton_Click"/>
+            <TextBox x:Name="CharacterListText" Canvas.Left="40" TextWrapping="Wrap" Canvas.Top="607" Width="321" Height="301" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Characters" Canvas.Left="35" Canvas.Top="254" Width="448" Background="#FF357933" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+    </Canvas>
+</Window>
