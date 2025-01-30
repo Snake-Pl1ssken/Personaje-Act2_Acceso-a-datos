@@ -413,11 +413,10 @@ namespace MansionMapEditor
                 command.CommandText += " DELETE FROM characters WHERE id =" + id + ";";
                 MessageBox.Show(command.CommandText);
                 command.ExecuteNonQuery();
-
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("No character deleted");
+                MessageBox.Show("No character deleted" + ex);
             }
         }
 
