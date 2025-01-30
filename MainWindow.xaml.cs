@@ -323,7 +323,7 @@ namespace MansionMapEditor
             {
                 MySqlCommand command = connection.CreateCommand();
                 int id = Int32.Parse(CharacterIdText.Text);
-                command.CommandText += "SELECT * FROM habitaciones WHERE id =" + id + ";";
+                command.CommandText += "SELECT * FROM characters WHERE id =" + id + ";";
 
                 MessageBox.Show(command.CommandText);
                 MySqlDataReader reader = command.ExecuteReader();
