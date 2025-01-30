@@ -425,7 +425,7 @@ namespace MansionMapEditor
             try
             {
                 MySqlCommand command = connection.CreateCommand();
-                command.CommandText += "SELECT * FROM habitaciones;";
+                command.CommandText += "SELECT * FROM characters;";
 
                 MessageBox.Show(command.CommandText);
                 MySqlDataReader reader = command.ExecuteReader();
@@ -442,10 +442,10 @@ namespace MansionMapEditor
                     roomBG = reader.GetString(2);
 
                     roomDestinyID = reader.GetInt32(3);
-                    roomdestinyID = Convert.ToString(roomID);
+                    roomdestinyID = Convert.ToString(roomDestinyID);
 
-                    RoomListText.Text += roomID + " " + roomName + " " + roomBG + " " + roomdestinyID + " \n";
-                    RoomListText.Text += " \n";
+                    CharacterListText.Text += roomID + " " + roomName + " " + roomBG + " " + roomdestinyID + " \n";
+                    CharacterListText.Text += " \n";
                 }
                 reader.Close();
 
