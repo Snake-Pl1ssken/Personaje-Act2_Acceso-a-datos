@@ -14,7 +14,7 @@ namespace MansionExplorer
     {
         // Constants
 
-        const string connectionString = "Server=127.0.0.1; Port=3307; Database=mansion; Uid=root; Pwd=;";
+        const string connectionString = "Server=127.0.0.1; Port=3306; Database=mansion; Uid=root; Pwd=;";
         const int initialRoom = 1;
 
         const int characterStartX = 100;
@@ -448,21 +448,23 @@ namespace MansionExplorer
 
             backgroundSprite.Texture = backgroundTextures[roomBackground];
 
-            // Get characters in room
-
+            // Vaciar la lista de personajes antes de cargar los nuevos
             characters.Clear();
 
-            // COMPLETAR: Rellenar la lista characters
-
-
-            room = _room;
-
-            //select de personajes en X habitacion 
-            command.CommandText = "SELECT name FROM characters WHERE id = " + roomW + ";";
+            // Obtener los personajes de la habitación actual
+            command = dbConnection.CreateCommand();
+            command.CommandText = "SELECT name, background FROM characters WHERE id = " + _room + ";";
             reader = command.ExecuteReader();
-            reader.Read();
-            nameCharacter = reader.GetString(0);
-            //characters.Add(nameCharacter);
+
+            while (reader.Read())
+            {
+                CharacterProperties character;
+                character.name = reader.GetString(0); // Nombre del personaje
+                character.image = reader.GetString(1); // Nombre del archivo de imagen del personaje
+
+                characters.Add(character);
+            }
+
             reader.Close();
 
 

@@ -115,3 +115,42 @@ D:\Jorge Luis\Acceso a datos\UF2\Personaje-Act2_Acceso-a-datos\obj\Debug\net8.0-
 D:\Jorge Luis\Acceso a datos\UF2\Personaje-Act2_Acceso-a-datos\obj\Debug\net8.0-windows\MansionMapEditor.pdb
 D:\Jorge Luis\Acceso a datos\UF2\Personaje-Act2_Acceso-a-datos\obj\Debug\net8.0-windows\MansionMapEditor.genruntimeconfig.cache
 D:\Jorge Luis\Acceso a datos\UF2\Personaje-Act2_Acceso-a-datos\obj\Debug\net8.0-windows\ref\MansionMapEditor.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MansionMapEditor.exe
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MansionMapEditor.deps.json
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MansionMapEditor.runtimeconfig.json
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MansionMapEditor.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MansionMapEditor.pdb
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.AssemblyReference.cache
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.cache
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor_MarkupCompile.lref
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.g.resources
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfoInputs.cache
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.AssemblyInfo.cs
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.csproj.CoreCompileInputs.cache
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.sourcelink.json
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionM.0FDBB448.Up2Date
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\refint\MansionMapEditor.dll
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.pdb
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\MansionMapEditor.genruntimeconfig.cache
+C:\Users\Plissken\Desktop\Jorge Luis\Grado Superior\DAM VDJGO 02\Acceso Datos\UF2\Personaje-UF2-ACT2\MapEditor\obj\Debug\net8.0-windows\ref\MansionMapEditor.dll
