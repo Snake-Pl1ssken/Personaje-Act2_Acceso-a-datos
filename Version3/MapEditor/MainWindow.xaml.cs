@@ -1,10 +1,64 @@
-﻿using System.Data.Common;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Reflection.Emit;
 using System.Windows;
 using MySql.Data.MySqlClient;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MansionMapEditor
 {
+    public class MansionContext : DbContext
+    {
+        const string connectionString = "Server=127.0.0.1; Port=3307; Database=mansionef; Uid=root; Pwd=;";
 
+        public DbSet<Room> rooms { get; set; }
+        public DbSet<Character> characters { get; set; }
+
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseMySQL(connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Room>().HasOne(e => e.neighbourN).WithMany();
+            modelBuilder.Entity<Room>().HasOne(e => e.neighbourE).WithMany();
+        }
+
+    }
+    public class Room
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string background { get; set; }
+
+        public ICollection<Character> characters { get; } = new List<Character>();
+
+        [ForeignKey("neighbourNId")]
+        public Room? neighbourN { get; set; }
+
+        [ForeignKey("neighbourSId")]
+        public Room? neighbourS { get; set; }
+
+        [ForeignKey("neighbourEId")]
+        public Room? neighbourE { get; set; }
+
+        [ForeignKey("neighbourWId")]
+        public Room? neighbourW { get; set; }
+
+    }
+
+    public class Character
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
+
+        public Room room { get; set; }
+    }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -14,8 +68,13 @@ namespace MansionMapEditor
 
         bool initializingComponent;
 
+
         public MainWindow()
         {
+            MansionContext mansion = new MansionContext();
+        
+            mansion.Database.AutoTransactionBehavior = AutoTransactionBehavior.Always;
+
             initializingComponent = true;
 
             InitializeComponent();
@@ -74,24 +133,13 @@ namespace MansionMapEditor
         {
             // Volver a crear las tablas de la base de datos, eliminando las
             // tablas anteriores
-
+            MansionContext mansion = new MansionContext();
             try
             {
                 DbCommand command = connection.CreateCommand();
 
-                command.CommandText = "DROP TABLE IF EXISTS characters;";
-
-                command.ExecuteNonQuery();
-
-                command.CommandText = "DROP TABLE IF EXISTS rooms;";
-            
-                command.ExecuteNonQuery();
-
-                
-
-
-
-
+                mansion.Database.EnsureDeleted();
+                mansion.Database.EnsureCreated();
 
                 command.CommandText = "CREATE TABLE rooms\n" +
                                       "(\n" +

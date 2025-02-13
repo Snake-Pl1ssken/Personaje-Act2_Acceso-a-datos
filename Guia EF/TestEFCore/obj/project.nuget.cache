@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TP0RYZOwXRg=",
+  "dgSpecHash": "tB5VBZGw2cg=",
   "success": true,
-  "projectFilePath": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\TestEFCore\\TestEFCore.csproj",
+  "projectFilePath": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Guia EF\\TestEFCore\\TestEFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

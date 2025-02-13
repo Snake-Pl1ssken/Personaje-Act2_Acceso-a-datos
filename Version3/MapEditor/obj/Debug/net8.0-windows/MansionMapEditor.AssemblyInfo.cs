@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MansionMapEditor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ec2985337cde3829f5dd300c758d026a1e00105")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8824dc0e0727b2f136f31fe2c8fad428dd9ace13")]
 [assembly: System.Reflection.AssemblyProductAttribute("MansionMapEditor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MansionMapEditor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
