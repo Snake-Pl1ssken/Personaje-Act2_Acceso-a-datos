@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD2039A-743C-4A49-B51B-B625570E0378}|TestEFCore\\TestEFCore.csproj|d:\\jorge luis\\acceso a datos\\uf2\\personaje-act2_acceso-a-datos\\version3\\testefcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DD2039A-743C-4A49-B51B-B625570E0378}|TestEFCore\\TestEFCore.csproj|solutionrelative:testefcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\TestEFCore\\Program.cs",
+              "RelativeDocumentMoniker": "TestEFCore\\Program.cs",
+              "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\TestEFCore\\Program.cs",
+              "RelativeToolTip": "TestEFCore\\Program.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAIAwwBYBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T12:16:35.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
