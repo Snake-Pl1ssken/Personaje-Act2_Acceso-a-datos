@@ -32,21 +32,9 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAcwM4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T23:52:39.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-12T23:52:37.797Z",
               "EditorCaption": ""
             },
             {
@@ -60,6 +48,18 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T23:52:33.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-12T23:52:37.797Z",
               "EditorCaption": ""
             }
           ]

@@ -141,34 +141,7 @@ namespace MansionMapEditor
                 mansion.Database.EnsureDeleted();
                 mansion.Database.EnsureCreated();
 
-                command.CommandText = "CREATE TABLE rooms\n" +
-                                      "(\n" +
-                                      "id INT PRIMARY KEY,\n" +
-                                      "name VARCHAR(80),\n" +
-                                      "description VARCHAR(200),\n" +
-                                      "background VARCHAR(80),\n" +
-                                      "neighbourN INT,\n" +
-                                      "neighbourS INT,\n" +
-                                      "neighbourE INT,\n" +
-                                      "neighbourW INT,\n" +
-                                      "FOREIGN KEY(neighbourN) REFERENCES rooms(id),\n" +
-                                      "FOREIGN KEY(neighbourS) REFERENCES rooms(id),\n" +
-                                      "FOREIGN KEY(neighbourE) REFERENCES rooms(id),\n" +
-                                      "FOREIGN KEY(neighbourW) REFERENCES rooms(id)\n" +
-                                      ");";
-                command.ExecuteNonQuery();
-
-
-                command.CommandText = "CREATE TABLE characters\n" +
-                                      "(\n" +
-                                      "id INT PRIMARY KEY,\n" +
-                                      "name VARCHAR(80),\n" +
-                                      "background VARCHAR(80),\n" +
-                                      "room INT,\n" +
-                                      "FOREIGN KEY(room) REFERENCES rooms(id)\n" +
-                                      ");";
-
-                command.ExecuteNonQuery();
+                mansion.SaveChanges();
             }
             catch(Exception ex)
             {
@@ -180,32 +153,20 @@ namespace MansionMapEditor
         {
             // Actualizar los campos con los valores de la habitación que
             // corresponda al id que el diseñador tenga puesto
+            MansionContext mansion = new MansionContext();
 
-            try
+            Console.WriteLine("id? ");
+            int id = Int32.Parse(Console.ReadLine());
+
+            Room? r = mansion.rooms.Find(id);
+
+            if (r != null)
             {
-                DbCommand command = connection.CreateCommand();
-
-                command.CommandText = "SELECT * FROM rooms WHERE id = " + RoomIdText.Text + ";";
-
-               //ShowMessage(command.CommandText);
-
-                DbDataReader reader = command.ExecuteReader();
-                if(reader.Read())
-                {
-                    RoomNameText.Text = reader.GetString(1);
-                    RoomDescriptionText.Text = reader.GetString(2);
-                    RoomBackgroundText.Text = reader.GetString(3);
-                    RoomNeighbourNText.Text = reader.IsDBNull(4) ? "" : "" + reader.GetInt32(4);
-                    RoomNeighbourSText.Text = reader.IsDBNull(5) ? "" : "" + reader.GetInt32(5);
-                    RoomNeighbourEText.Text = reader.IsDBNull(6) ? "" : "" + reader.GetInt32(6);
-                    RoomNeighbourWText.Text = reader.IsDBNull(7) ? "" : "" + reader.GetInt32(7);
-                }
-
-                reader.Close();
+                Console.WriteLine("Habitacion " + r.id + ": " + r.name);
             }
-            catch(Exception ex)
+            else
             {
-                ShowError(ex);
+                Console.WriteLine("No encontrada");
             }
         }
 
@@ -213,31 +174,43 @@ namespace MansionMapEditor
         {
             // Añadir una nueva habitación con los valores que el diseñador tenga
             // puestos en los campos
+            MansionContext mansion = new MansionContext();
+            //try
+            //{
+                var room = new Room();
+                room.id = Int32.Parse(RoomIdText.Text);
+                room.name = RoomNameText.Text;
+                room.description = RoomDescriptionText.Text;
+                room.background = RoomBackgroundText.Text;
 
-            try
-            {
-                DbCommand command = connection.CreateCommand();
+                Room? r;
+                int test = Int32.Parse(RoomNeighbourSText.Text);
+                r = mansion.rooms.Find((test != null) ? test : "");
+                room.neighbourS = r;
 
-                command.CommandText = "INSERT INTO rooms VALUES (" + RoomIdText.Text + "," +
-                                                                     Quote(RoomNameText.Text) + "," +
-                                                                     Quote(RoomDescriptionText.Text) + "," +
-                                                                     Quote(RoomBackgroundText.Text) + "," +
-                                                                     (RoomNeighbourNText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourNText.Text) + "," +
-                                                                     (RoomNeighbourSText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourSText.Text) + "," +
-                                                                     (RoomNeighbourEText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourEText.Text) + "," +
-                                                                     (RoomNeighbourWText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourWText.Text) + ");";
+                int test2 = Int32.Parse(RoomNeighbourWText.Text);
+                r = mansion.rooms.Find((test2 != null) ? test2 : "");
+                room.neighbourW = r;
 
-               //ShowMessage(command.CommandText);
+                int test3 = Int32.Parse(RoomNeighbourEText.Text);
+                r = mansion.rooms.Find((test3 != null) ? test : "");
+                room.neighbourE = r;
 
-               command.ExecuteNonQuery();
+                int test4 = Int32.Parse(RoomNeighbourNText.Text);
+                r = mansion.rooms.Find((test4 != null) ? test : "");
+                room.neighbourN = r;
 
-               UpdateRoomList();
+                mansion.rooms.Add(room);
 
-            }
-            catch(Exception ex)
-            {
-                ShowError(ex);
-            }
+                mansion.SaveChanges();
+
+            //if else en este caso
+
+            //}
+            //catch(Exception ex)
+            //{
+            //    ShowError(ex);
+            //}
         }
 
         private void RoomModifyButton_Click(object sender, RoutedEventArgs e)
@@ -403,33 +376,32 @@ namespace MansionMapEditor
 
         private void CharacterAddButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                MySqlCommand command = connection.CreateCommand();
+            //var character1 = new Character();
+            //character1.id = 1;
+            //character1.name = "Basilio";
+            //character1.image = "";
+            //character1.room = room1;
 
-                int id = Int32.Parse(CharacterIdText.Text);
-                int characterRoomDestiny = Int32.Parse(CharacterRoomText.Text);
+            //MansionContext mansion = new MansionContext();
+            //try
+            //{
+            //    var character1 = new Character();
+            //    character1.id = Int32.Parse(CharacterIdText.Text);
+            //    character1.name = CharacterName.Text;
+            //    character1.image = CharacterImageText.Text;
 
-                command.CommandText = "INSERT INTO characters (" +
-                                        "ID," +
-                                        "Name," +
-                                        "Background," +
-                                        "room)";
+            //    Room? c;
+            //    c = mansion.rooms.Find(Int32.Parse(CharacterRoomText.Text));
+            //    character1.room = c;
 
-                command.CommandText += " VALUES (" +
-                         id + "," +
-                        "'" + CharacterName.Text + "'" + "," +
-                        "'" + CharacterImageText.Text + "'" + "," +
-                         + characterRoomDestiny + ");";
 
-                MessageBox.Show(command.CommandText);
-                command.ExecuteNonQuery();
+            //    mansion.rooms.Add(character1);
 
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("No line added" + ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ShowError(ex);
+            //}
         }
 
         private void CharacterModifyButton_Click(object sender, RoutedEventArgs e)
