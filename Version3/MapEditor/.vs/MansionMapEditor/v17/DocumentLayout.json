@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{F5B0CF22-D911-4CCE-9DA8-82B6ECEE51EB}|MansionMapEditor.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5B0CF22-D911-4CCE-9DA8-82B6ECEE51EB}|MansionMapEditor.csproj|d:\\jorge luis\\acceso a datos\\uf2\\personaje-act2_acceso-a-datos\\version3\\mapeditor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F5B0CF22-D911-4CCE-9DA8-82B6ECEE51EB}|MansionMapEditor.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F5B0CF22-D911-4CCE-9DA8-82B6ECEE51EB}|MansionMapEditor.csproj|d:\\jorge luis\\acceso a datos\\uf2\\personaje-act2_acceso-a-datos\\version3\\mapeditor\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5B0CF22-D911-4CCE-9DA8-82B6ECEE51EB}|MansionMapEditor.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,14 +32,14 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAcwM4AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADIBAAAAAAAAAAAgwA4BAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T23:52:39.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
@@ -47,20 +47,7 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T23:52:33.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-12T23:52:37.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:52:33.531Z"
             }
           ]
         }

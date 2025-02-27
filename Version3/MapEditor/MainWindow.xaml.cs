@@ -83,10 +83,10 @@ namespace MansionMapEditor
 
             ShowRoomsOrCharacters(true);
 
-            ServerText.Text = "localhost";
-            PortText.Text = "3307";
-            DBText.Text = "mansion";
-            UserText.Text = "root";
+            //ServerText.Text = "localhost";
+            //PortText.Text = "3307";
+            //DBText.Text = "mansion";
+            //UserText.Text = "root";
             //PassText.Text = "root";
         }
 
@@ -151,22 +151,26 @@ namespace MansionMapEditor
 
         private void RoomFindButton_Click(object sender, RoutedEventArgs e)
         {
-            // Actualizar los campos con los valores de la habitación que
-            // corresponda al id que el diseñador tenga puesto
             MansionContext mansion = new MansionContext();
 
-            Console.WriteLine("id? ");
-            int id = Int32.Parse(Console.ReadLine());
+            int id = Int32.Parse(RoomIdText.Text);
 
             Room? r = mansion.rooms.Find(id);
 
             if (r != null)
             {
+                RoomNameText.Text = r.name;
+                RoomDescriptionText.Text = r.description;
+                RoomBackgroundText.Text = r.background;
+                RoomNeighbourEText.Text = Convert.ToString(r.neighbourE);
+                RoomNeighbourNText.Text = Convert.ToString(r.neighbourN);
+                RoomNeighbourSText.Text = Convert.ToString(r.neighbourS);
+                RoomNeighbourWText.Text = Convert.ToString(r.neighbourW);
                 Console.WriteLine("Habitacion " + r.id + ": " + r.name);
             }
             else
             {
-                Console.WriteLine("No encontrada");
+                Console.WriteLine("Error 303: Not Found");
             }
         }
 
@@ -184,33 +188,55 @@ namespace MansionMapEditor
                 room.background = RoomBackgroundText.Text;
 
                 Room? r;
-                int test = Int32.Parse(RoomNeighbourSText.Text);
-                r = mansion.rooms.Find((test != null) ? test : "");
-                room.neighbourS = r;
+                string test = RoomNeighbourSText.Text;
 
-                int test2 = Int32.Parse(RoomNeighbourWText.Text);
-                r = mansion.rooms.Find((test2 != null) ? test2 : "");
-                room.neighbourW = r;
+                if (test == "")
+                {
+                    room.neighbourS = null;
+                }
+                else
+                { 
+                    r = mansion.rooms.Find(Int32.Parse(test));
+                    room.neighbourS = r;                
+                }
+                
+                string test2 = RoomNeighbourWText.Text;
+                if (test == "")
+                {
+                    room.neighbourW = null;
+                }
+                else
+                {
+                    r = mansion.rooms.Find(Int32.Parse(test2));
+                    room.neighbourW = r;
+                }
 
-                int test3 = Int32.Parse(RoomNeighbourEText.Text);
-                r = mansion.rooms.Find((test3 != null) ? test : "");
-                room.neighbourE = r;
+                string test3 = RoomNeighbourEText.Text;
+                if (test == "")
+                {
+                    room.neighbourE = null;
+                }
+                else
+                {
+                    r = mansion.rooms.Find(Int32.Parse(test3));
+                    room.neighbourE = r;
+                }
 
-                int test4 = Int32.Parse(RoomNeighbourNText.Text);
-                r = mansion.rooms.Find((test4 != null) ? test : "");
-                room.neighbourN = r;
+
+                string test4 = RoomNeighbourNText.Text;
+                if (test == "")
+                {
+                    room.neighbourN = null;
+                }
+                else
+                {
+                    r = mansion.rooms.Find(Int32.Parse(test4));
+                    room.neighbourN = r;
+                }
 
                 mansion.rooms.Add(room);
 
                 mansion.SaveChanges();
-
-            //if else en este caso
-
-            //}
-            //catch(Exception ex)
-            //{
-            //    ShowError(ex);
-            //}
         }
 
         private void RoomModifyButton_Click(object sender, RoutedEventArgs e)
@@ -242,26 +268,22 @@ namespace MansionMapEditor
             {
                 ShowError(ex);
             }
+            //find, cambiar lo que quieres y guardar
         }
 
         private void RoomDeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            // Eliminar la habitación con el id que tenga puesto el diseñador
-
-            try
+            MansionContext mansion = new MansionContext();
+            int id = Int32.Parse(RoomIdText.Text);
+            Room? r = mansion.rooms.Find(id);
+            if (r != null)
             {
-               DbCommand command = connection.CreateCommand();
-
-               command.CommandText = "DELETE FROM rooms WHERE id = " + RoomIdText.Text + ";";
-
-               command.ExecuteNonQuery();
-
-               UpdateRoomList();
-
+                mansion.rooms.Remove(r);
+                mansion.SaveChanges();
             }
-            catch(Exception ex)
+            else
             {
-                ShowError(ex);
+                Console.WriteLine("Error403:RoomNotFound");
             }
         }
 
@@ -281,32 +303,14 @@ namespace MansionMapEditor
 
         void UpdateRoomList()
         {
-            string text = "";
-
-            DbCommand command = connection.CreateCommand();
-
-
-            command.CommandText = "SELECT * FROM rooms;";
-
-            DbDataReader reader = command.ExecuteReader();
-            while(reader.Read())
+            MansionContext mansion = new MansionContext();
+            foreach (Room c in mansion.rooms)
             {
-                text += "" + reader.GetInt32(0);
-                text += ", " + reader.GetString(1);
-                text += ", " + reader.GetString(2);
-                text += ", " + reader.GetString(3);
-                text += ", " + (reader.IsDBNull(4) ? "" : "" + reader.GetInt32(4));
-                text += ", " + (reader.IsDBNull(5) ? "" : "" + reader.GetInt32(5));
-                text += ", " + (reader.IsDBNull(6) ? "" : "" + reader.GetInt32(6));
-                text += ", " + (reader.IsDBNull(7) ? "" : "" + reader.GetInt32(7));
-                text += "\n";
+                Console.WriteLine("Personaje " + c.id + ": " + c.name);
+
+                RoomListText.Text += c.id + " " + c.name + " " + c.description + " " + c.background + " " +
+                                     c.neighbourN + " " + c.neighbourE + " " + c.neighbourW + " " + c.neighbourS + "\n";
             }
-
-            RoomListText.Text = text;
-
-            //ShowMessage(RoomListText.Text);
-
-            reader.Close();
         }
 
         private void EditRoomsRadioButton_Checked(object sender, RoutedEventArgs e)
@@ -340,68 +344,51 @@ namespace MansionMapEditor
 
         private void CharacterFindButton_Click(object sender, RoutedEventArgs e)
         {
-            try
+            MansionContext mansion = new MansionContext();
+
+            int id = Int32.Parse(CharacterIdText.Text);
+
+            Character? r = mansion.characters.Find(id);
+
+            if (r != null)
             {
-                MySqlCommand command = connection.CreateCommand();
-                int id = Int32.Parse(CharacterIdText.Text);
-                command.CommandText += "SELECT * FROM characters WHERE id =" + id + ";";
+                CharacterIdText.Text = Convert.ToString(r.id);
+                CharacterName.Text = r.name;
+                CharacterImageText.Text = r.image;
+                CharacterRoomText.Text = Convert.ToString(r.room);
 
-                MessageBox.Show(command.CommandText);
-                MySqlDataReader reader = command.ExecuteReader();
-
-                int RoomId, RoomDestinyID;
-
-
-                if (reader.Read())
-                {
-                    RoomId = reader.GetInt32(0);
-                    CharacterIdText.Text = Convert.ToString(RoomId);
-
-                    CharacterName.Text = reader.GetString(1);
-                    CharacterImageText.Text = reader.GetString(2);
-
-                    RoomDestinyID = reader.GetInt32(3);
-                    CharacterRoomText.Text = Convert.ToString(RoomDestinyID);
-
-                    Console.WriteLine(RoomNameText.Text);
-                }
-                reader.Close();
-
+                Console.WriteLine("Habitacion " + r.id + ": " + r.name);
             }
-            catch
+            else
             {
-                MessageBox.Show("No room found");
+                Console.WriteLine("Error 303: Not Found");
             }
         }
 
         private void CharacterAddButton_Click(object sender, RoutedEventArgs e)
         {
-            //var character1 = new Character();
-            //character1.id = 1;
-            //character1.name = "Basilio";
-            //character1.image = "";
-            //character1.room = room1;
+            MansionContext mansion = new MansionContext();
+            var character = new Character();
+            character.id = Int32.Parse(CharacterIdText.Text);
+            character.name = CharacterName.Text;
+            character.image = CharacterImageText.Text;
 
-            //MansionContext mansion = new MansionContext();
-            //try
-            //{
-            //    var character1 = new Character();
-            //    character1.id = Int32.Parse(CharacterIdText.Text);
-            //    character1.name = CharacterName.Text;
-            //    character1.image = CharacterImageText.Text;
+            Room? r;
+            string test = CharacterRoomText.Text;
 
-            //    Room? c;
-            //    c = mansion.rooms.Find(Int32.Parse(CharacterRoomText.Text));
-            //    character1.room = c;
+            if (test == "")
+            {
+                character.room = null;
+            }
+            else
+            {
+                r = mansion.rooms.Find(Int32.Parse(test));
+                character.room = r;
+            }
 
+            mansion.characters.Add(character);
 
-            //    mansion.rooms.Add(character1);
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    ShowError(ex);
-            //}
+            mansion.SaveChanges();
         }
 
         private void CharacterModifyButton_Click(object sender, RoutedEventArgs e)
@@ -426,53 +413,28 @@ namespace MansionMapEditor
 
         private void CharacterDeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            try
+            MansionContext mansion = new MansionContext();
+            int id = Int32.Parse(CharacterIdText.Text);
+            Character? r = mansion.characters.Find(id);
+            if (r != null)
             {
-                MySqlCommand command = connection.CreateCommand();
-                int id = Int32.Parse(CharacterIdText.Text);
-                command.CommandText += " DELETE FROM characters WHERE id =" + id + ";";
-                MessageBox.Show(command.CommandText);
-                command.ExecuteNonQuery();
+                mansion.characters.Remove(r);
+                mansion.SaveChanges();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("No character deleted" + ex);
+                Console.WriteLine("Error403:RoomNotFound");
             }
         }
 
         private void CharacterListUpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            try
+            MansionContext mansion = new MansionContext();
+            foreach (Character c in mansion.characters)
             {
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandText += "SELECT * FROM characters;";
+                Console.WriteLine("Personaje " + c.id + ": " + c.name);
 
-                MessageBox.Show(command.CommandText);
-                MySqlDataReader reader = command.ExecuteReader();
-
-                int RoomId, roomDestinyID;
-                string roomID, roomName, roomBG, roomdestinyID;
-                RoomListText.Text = "";
-                while (reader.Read())
-                {
-                    RoomId = reader.GetInt32(0);
-                    roomID = Convert.ToString(RoomId);
-
-                    roomName = reader.GetString(1);
-                    roomBG = reader.GetString(2);
-
-                    roomDestinyID = reader.GetInt32(3);
-                    roomdestinyID = Convert.ToString(roomDestinyID);
-
-                    CharacterListText.Text += roomID + " " + roomName + " " + roomBG + " " + roomdestinyID + " \n";
-                    CharacterListText.Text += " \n";
-                }
-                reader.Close();
-
-            }
-            catch
-            {
-                MessageBox.Show("No room found");
+                RoomListText.Text += c.id + " " + c.name + " " + c.image + " " + c.room + "\n";
             }
         }
 
