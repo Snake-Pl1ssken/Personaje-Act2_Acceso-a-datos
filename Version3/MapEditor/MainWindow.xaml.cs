@@ -82,12 +82,6 @@ namespace MansionMapEditor
             initializingComponent = false;
 
             ShowRoomsOrCharacters(true);
-
-            //ServerText.Text = "localhost";
-            //PortText.Text = "3307";
-            //DBText.Text = "mansion";
-            //UserText.Text = "root";
-            //PassText.Text = "root";
         }
 
         private void ConnectButton_Click(object sender, RoutedEventArgs e)
@@ -241,32 +235,30 @@ namespace MansionMapEditor
 
         private void RoomModifyButton_Click(object sender, RoutedEventArgs e)
         {
-            // Actualizar la habitación con el id que tenga puesto el diseñador
-            // con que tenga puesto en el resto de campos
+            MansionContext mansion = new MansionContext();
 
-            try
+            int id = Int32.Parse(RoomIdText.Text);
+
+            Room? r = mansion.rooms.Find(id);
+
+            if (r != null)
             {
-                DbCommand command = connection.CreateCommand();
+                Room r2 = new Room();
+                r.name = RoomNameText.Text;
+                r.description = RoomDescriptionText.Text;
+                r.background = RoomBackgroundText.Text;
 
-                command.CommandText = "UPDATE rooms SET name = " + Quote(RoomNameText.Text) + "," +
-                                                        "description = " + Quote(RoomDescriptionText.Text) + "," + 
-                                                        "background = " + Quote(RoomBackgroundText.Text) + "," + 
-                                                        "neighbourN = " + (RoomNeighbourNText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourNText.Text) + "," +
-                                                        "neighbourS = " + (RoomNeighbourSText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourSText.Text) + "," +
-                                                        "neighbourE = " + (RoomNeighbourEText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourEText.Text) + "," +
-                                                        "neighbourW = " + (RoomNeighbourWText.Text.Trim().Length == 0 ? "NULL" : RoomNeighbourWText.Text) + " " +
-                                                    "WHERE id = " + RoomIdText.Text + ";";
 
-               //ShowMessage(command.CommandText);
+                r2.neighbourN = r.neighbourN;
+                r2.neighbourE = r.neighbourE;
+                r2.neighbourW = r.neighbourW;
+                r2.neighbourS = r.neighbourS;
 
-               command.ExecuteNonQuery();
-
-                UpdateRoomList();
-
+                mansion.SaveChanges();
             }
-            catch(Exception ex)
+            else
             {
-                ShowError(ex);
+                Console.WriteLine("Error 303: Not Found");
             }
             //find, cambiar lo que quieres y guardar
         }
