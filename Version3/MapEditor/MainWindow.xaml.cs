@@ -8,6 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MansionMapEditor
 {
+    public class CharacterRoomInfo
+    {
+        public int Id { get; set; }
+        public int RoomId { get; set; }
+    }
     public class MansionContext : DbContext
     {
         const string connectionString = "Server=localhost; Port=3306; Database=mansionef; Uid=root; Pwd=;";
@@ -307,22 +312,27 @@ namespace MansionMapEditor
 
             Character? r = mansion.characters.Find(id);
 
+            CharacterRoomInfo? r2 = mansion.characters.Where(c => c.id == id).Select(c => new CharacterRoomInfo { Id = c.id, RoomId = c.room.id }).FirstOrDefault();
+
+
             if (r != null)
             {
                 CharacterIdText.Text = Convert.ToString(r.id);
                 CharacterName.Text = r.name;
                 CharacterImageText.Text = r.image;
+                CharacterRoomText.Text = Convert.ToString(r2.RoomId);
 
-                Room? r2(string RoomTo)
-                {
-                    if (string.IsNullOrEmpty(RoomTo)) return null;
 
-                    if (int.TryParse(RoomTo, out int roomId))
-                    {
-                        return mansion.rooms.Find(roomId);
-                    }
-                    return null;
-                }
+                //Room? r2(string RoomTo)
+                //{
+                //    if (string.IsNullOrEmpty(RoomTo)) return null;
+
+                //    if (int.TryParse(RoomTo, out int roomId))
+                //    {
+                //        return mansion.rooms.Find(roomId);
+                //    }
+                //    return null;
+                //}
                 //CharacterRoomText.Text = r2(vasjkb);
 
                 Console.WriteLine("Habitacion " + r.id + ": " + r.name);
