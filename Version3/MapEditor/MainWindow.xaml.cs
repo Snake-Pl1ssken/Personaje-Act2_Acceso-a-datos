@@ -10,7 +10,7 @@ namespace MansionMapEditor
 {
     public class MansionContext : DbContext
     {
-        const string connectionString = "Server=127.0.0.1; Port=3307; Database=mansionef; Uid=root; Pwd=;";
+        const string connectionString = "Server=localhost; Port=3306; Database=mansionef; Uid=root; Pwd=;";
 
         public DbSet<Room> rooms { get; set; }
         public DbSet<Character> characters { get; set; }
@@ -170,67 +170,32 @@ namespace MansionMapEditor
 
         private void RoomAddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Añadir una nueva habitación con los valores que el diseñador tenga
-            // puestos en los campos
             MansionContext mansion = new MansionContext();
-            //try
-            //{
-                var room = new Room();
-                room.id = Int32.Parse(RoomIdText.Text);
-                room.name = RoomNameText.Text;
-                room.description = RoomDescriptionText.Text;
-                room.background = RoomBackgroundText.Text;
+            var room = new Room();
+            room.id = Int32.Parse(RoomIdText.Text);
+            room.name = RoomNameText.Text;
+            room.description = RoomDescriptionText.Text;
+            room.background = RoomBackgroundText.Text;
 
-                Room? r;
-                string test = RoomNeighbourSText.Text;
+            Room? r2(string RoomTo)
+            {
+                if (string.IsNullOrEmpty(RoomTo)) return null;
 
-                if (test == "")
+                if (int.TryParse(RoomTo, out int roomId))
                 {
-                    room.neighbourS = null;
+                    return mansion.rooms.Find(roomId);
                 }
-                else
-                { 
-                    r = mansion.rooms.Find(Int32.Parse(test));
-                    room.neighbourS = r;                
-                }
-                
-                string test2 = RoomNeighbourWText.Text;
-                if (test == "")
-                {
-                    room.neighbourW = null;
-                }
-                else
-                {
-                    r = mansion.rooms.Find(Int32.Parse(test2));
-                    room.neighbourW = r;
-                }
+                return null;
+            }
 
-                string test3 = RoomNeighbourEText.Text;
-                if (test == "")
-                {
-                    room.neighbourE = null;
-                }
-                else
-                {
-                    r = mansion.rooms.Find(Int32.Parse(test3));
-                    room.neighbourE = r;
-                }
+            room.neighbourS = r2(RoomNeighbourSText.Text);
+            room.neighbourW = r2(RoomNeighbourWText.Text);
+            room.neighbourE = r2(RoomNeighbourEText.Text);
+            room.neighbourN = r2(RoomNeighbourNText.Text);
 
+            mansion.rooms.Add(room);
 
-                string test4 = RoomNeighbourNText.Text;
-                if (test == "")
-                {
-                    room.neighbourN = null;
-                }
-                else
-                {
-                    r = mansion.rooms.Find(Int32.Parse(test4));
-                    room.neighbourN = r;
-                }
-
-                mansion.rooms.Add(room);
-
-                mansion.SaveChanges();
+            mansion.SaveChanges();
         }
 
         private void RoomModifyButton_Click(object sender, RoutedEventArgs e)
@@ -347,7 +312,18 @@ namespace MansionMapEditor
                 CharacterIdText.Text = Convert.ToString(r.id);
                 CharacterName.Text = r.name;
                 CharacterImageText.Text = r.image;
-                CharacterRoomText.Text = Convert.ToString(r.room);
+
+                Room? r2(string RoomTo)
+                {
+                    if (string.IsNullOrEmpty(RoomTo)) return null;
+
+                    if (int.TryParse(RoomTo, out int roomId))
+                    {
+                        return mansion.rooms.Find(roomId);
+                    }
+                    return null;
+                }
+                //CharacterRoomText.Text = r2(vasjkb);
 
                 Console.WriteLine("Habitacion " + r.id + ": " + r.name);
             }
@@ -365,18 +341,18 @@ namespace MansionMapEditor
             character.name = CharacterName.Text;
             character.image = CharacterImageText.Text;
 
-            Room? r;
-            string test = CharacterRoomText.Text;
 
-            if (test == "")
+            Room? r2(string RoomTo)
             {
-                character.room = null;
+                if (string.IsNullOrEmpty(RoomTo)) return null;
+
+                if (int.TryParse(RoomTo, out int roomId))
+                {
+                    return mansion.rooms.Find(roomId);
+                }
+                return null;
             }
-            else
-            {
-                r = mansion.rooms.Find(Int32.Parse(test));
-                character.room = r;
-            }
+            character.room = r2(CharacterRoomText.Text);
 
             mansion.characters.Add(character);
 
@@ -385,21 +361,59 @@ namespace MansionMapEditor
 
         private void CharacterModifyButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                MySqlCommand command = connection.CreateCommand();
-                int id = Int32.Parse(CharacterIdText.Text);
-                command.CommandText += "UPDATE characters SET Name='" + CharacterName.Text
-                                    + "', Background='" + CharacterImageText.Text
-                                    + "', room='" + CharacterRoomText.Text
-                                    + "' WHERE id =" + id + ";";
+            //try
+            //{
+            //    MySqlCommand command = connection.CreateCommand();
+            //    int id = Int32.Parse(CharacterIdText.Text);
+            //    command.CommandText += "UPDATE characters SET Name='" + CharacterName.Text
+            //                        + "', Background='" + CharacterImageText.Text
+            //                        + "', room='" + CharacterRoomText.Text
+            //                        + "' WHERE id =" + id + ";";
 
-                MessageBox.Show(command.CommandText);
-                command.ExecuteNonQuery();
-            }
-            catch
+            //    MessageBox.Show(command.CommandText);
+            //    command.ExecuteNonQuery();
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("No Modify room");
+            //}
+
+
+            MansionContext mansion = new MansionContext();
+
+            int id = Int32.Parse(CharacterIdText.Text);
+
+            Character? r = mansion.characters.Find(id);
+
+            if (r != null)
             {
-                MessageBox.Show("No Modify room");
+                r.id = Int32.Parse(CharacterIdText.Text);
+                r.name = CharacterName.Text;
+                r.image = CharacterImageText.Text;
+                
+                int idR = Int32.Parse(CharacterRoomText.Text);
+                Room? r2 = mansion.rooms.Find(idR);
+                r.room = r2;
+                //Room? r2 = mansion.rooms.Find(idR);
+
+                //if (r2 != null)
+                //{
+                //    r.room = r2;
+                //}
+                //else
+                //{
+                //    r.room = r2;
+                //}
+
+                //r2.neighbourN = r.neighbourN;
+                //r2.neighbourE = r.neighbourE;
+                //r2.neighbourW = r.neighbourW;
+                //r2.neighbourS = r.neighbourS;
+                mansion.SaveChanges();
+            }
+            else
+            {
+                Console.WriteLine("Error 303: Not Found");
             }
         }
 
@@ -426,9 +440,12 @@ namespace MansionMapEditor
             {
                 Console.WriteLine("Personaje " + c.id + ": " + c.name);
 
-                RoomListText.Text += c.id + " " + c.name + " " + c.image + " " + c.room + "\n";
+                CharacterListText.Text += c.id + " " + c.name + " " + c.image + " " + c.room + "\n";
             }
+
         }
+
+
 
         private void ShowError(Exception e)
         {

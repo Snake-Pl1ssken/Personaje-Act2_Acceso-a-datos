@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj": {}
+    "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj": {}
   },
   "projects": {
-    "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj": {
+    "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj",
+        "projectUniqueName": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj",
         "projectName": "MansionMapEditor",
-        "projectPath": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj",
-        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-        "outputPath": "D:\\Jorge Luis\\Acceso a datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\obj\\",
+        "projectPath": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\MansionMapEditor.csproj",
+        "packagesPath": "C:\\Users\\Plissken\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Plissken\\Desktop\\Jorge Luis\\Grado Superior\\DAM VDJGO 02\\Acceso Datos\\UF2\\Personaje-Act2_Acceso-a-datos\\Version3\\MapEditor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Plissken\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
